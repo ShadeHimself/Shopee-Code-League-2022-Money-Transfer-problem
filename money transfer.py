@@ -12,15 +12,15 @@ for i in range(N):
 for i in range(T):
     trans=input('What is the transaction?')
     trans1=list(trans.split())
-    user1=trans1(0)      
-    user2=trans1(1)
-    amt=trans1(2)
-    newAmt=bank.get(user1)-amt
-    bank[user1]=newAmt          #update transactor balance
-    newAmt=bank.get(user2)+amt
-    bank[user2]=newAmt          #update receiver balance
+    user1=trans1[0]      
+    user2=trans1[1]
+    amt=trans1[2]
+    newAmt=int(bank.get(user1))-int(amt)
+    bank[user1]=str(newAmt)          #update transactor balance
+    newAmt=int(bank.get(user2))+int(amt)
+    bank[user2]=str(newAmt)         #update receiver balance
 
-for key, value in bank:
+for key, value in bank.items():
     print(key + value)
 
 
