@@ -7,3 +7,6 @@ data = [(3, 4)
 (charlie, amir, 20)
 (charlie, amir, 7)
 ]
+
+class User:
+    
