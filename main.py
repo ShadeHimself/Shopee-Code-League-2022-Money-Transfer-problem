@@ -9,7 +9,10 @@ data = [(3, 4)
 ]
 
 class User:
-    def __init__(self, name, amount):
-        self.name = name
-        self.amount = amount 
+    def __init__(self, user, balance):
+        self.name = user
+        self.amount = balance  
+    
+    def transfer(self,user,user2, amount):
+        
         
