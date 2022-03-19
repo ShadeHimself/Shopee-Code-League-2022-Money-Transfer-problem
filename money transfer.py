@@ -15,10 +15,11 @@ for i in range(T):
     user1=trans1[0]      
     user2=trans1[1]
     amt=trans1[2]
-    newAmt=int(bank.get(user1))-int(amt)
-    bank[user1]=str(newAmt)          #update transactor balance
-    newAmt=int(bank.get(user2))+int(amt)
-    bank[user2]=str(newAmt)         #update receiver balance
+    if int(bank.get(user1))>=int(amt):
+        newAmt=int(bank.get(user1))-int(amt)
+        bank[user1]=str(newAmt)          #update transactor balance
+        newAmt=int(bank.get(user2))+int(amt)
+        bank[user2]=str(newAmt)         #update receiver balance
 
 for key, value in bank.items():
     print(key + value)
