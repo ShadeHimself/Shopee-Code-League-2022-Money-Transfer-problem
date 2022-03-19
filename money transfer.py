@@ -1,21 +1,20 @@
 
-
 bank={}
 data=input('?')
 data=list(data.split())
-N=data[0]
-T=data[1]
-for i in N:
+N=int(data[0])
+T=int(data[1])
+for i in range(N):
     obj=input('Input username and balance')
     list1=list(obj.split())
     bank.update({list1[0]:list1[1]})
 
-for i in T:
+for i in range(T):
     trans=input('What is the transaction?')
-    trans=list(trans.split())
-    user1=trans(0)      
-    user2=trans(1)
-    amt=trans(2)
+    trans1=list(trans.split())
+    user1=trans1(0)      
+    user2=trans1(1)
+    amt=trans1(2)
     newAmt=bank.get(user1)-amt
     bank[user1]=newAmt          #update transactor balance
     newAmt=bank.get(user2)+amt
